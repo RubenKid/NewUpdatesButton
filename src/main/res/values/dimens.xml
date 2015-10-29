@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="new_updates_button_width">224dp</dimen>
+    <dimen name="new_updates_button_height">55dp</dimen>
+    <dimen name="new_updates_button_padding">5dp</dimen>
+    <dimen name="new_updates_button_text_size">13sp</dimen>
+    <dimen name="new_updates_button_triangle_height">8dp</dimen>
+    <dimen name="new_updates_top_margin">10dp</dimen>
+    <dimen name="new_updates_shadow_padding">7dp</dimen>
+</resources>
