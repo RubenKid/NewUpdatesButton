@@ -4,11 +4,13 @@ package com.rubenkid.newupdatesbutton;
  * Created by ruben on 10/26/15.
  */
 public class Utils {
-
+    
     /**
      * Determines whether a provided color is dark accordingly to W3C with a minor adjustment - the
      * brightness border is a bit higher now
      * @see <a href="http://www.w3.org/WAI/ER/WD-AERT/#color-contrast">W3C recommendation</a>
+     * @param testColor
+     * @return
      */
     public static boolean isDarkColor(int testColor) {
         final int red = testColor >> 16 & 0xFF;
