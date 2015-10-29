@@ -65,7 +65,7 @@ bintray {
     key = '5e0d68e94b099179c56d792ed5d753e0dd993aa5'
     pkg {
         repo = 'maven'
-        name = 'com.rubenkid.newupdatesbutton'
+        name = 'NewUpdatesButton'
 
         version {
             name = '0.1'

@@ -10,7 +10,6 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
-import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -91,8 +90,8 @@ public class NewUpdatesButton extends Button {
 
     private void setTextColor() {
         final int textColor = Utils.isDarkColor(mColor) ?
-                ContextCompat.getColor(getContext(), android.R.color.white)
-                : ContextCompat.getColor(getContext(), android.R.color.black);
+                getResources().getColor(android.R.color.white)
+                : getResources().getColor(android.R.color.black);
         setTextColor(textColor);
     }
 
