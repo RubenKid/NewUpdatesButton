@@ -8,7 +8,6 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Path;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
@@ -63,24 +62,11 @@ public class NewUpdatesButton extends Button {
 
         setLayerType(View.LAYER_TYPE_SOFTWARE, paint);
 
-
-        int triangleHeight = getResources().getDimensionPixelSize(R.dimen.new_updates_button_triangle_height);
-        int triangleWidth = triangleHeight * 2;
-
         //Draw rectangle
         int horizontalMargin = canvas.getWidth() / 2 - getResources().getDimensionPixelSize(R.dimen.new_updates_button_width) / 2;
-        RectF rect = new RectF(horizontalMargin + shadowPadding, triangleHeight,
-                horizontalMargin + getResources().getDimensionPixelSize(R.dimen.new_updates_button_width) - shadowPadding, canvas.getHeight() - triangleHeight);
+        RectF rect = new RectF(horizontalMargin + shadowPadding, shadowPadding,
+                horizontalMargin + getResources().getDimensionPixelSize(R.dimen.new_updates_button_width) - shadowPadding, canvas.getHeight() - shadowPadding);
         canvas.drawRoundRect(rect, cornerRadius, cornerRadius, paint);
-
-        //Draw triangle
-        Path triangle = new Path();
-        triangle.moveTo(canvas.getWidth() / 2 - triangleWidth / 2, triangleHeight);
-        triangle.lineTo(canvas.getWidth() / 2, 0);
-        triangle.lineTo(canvas.getWidth() / 2 + triangleWidth / 2, triangleHeight);
-        triangle.close();
-        paint.setShadowLayer(0, 0, 0, 0);
-        canvas.drawPath(triangle, paint);
 
         //Set Text
         setTextColor();
